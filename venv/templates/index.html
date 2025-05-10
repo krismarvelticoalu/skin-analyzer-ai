@@ -19,7 +19,7 @@
         📁 Upload Image
       </button>
 
-      <button onclick="openCamera()" class="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow">
+      <button id="openCamera" onclick="openCamera()" class="bg-pink-500 hover:bg-pink-600 text-white font-medium py-2 px-4 rounded-xl shadow">
         📸 Use Camera
       </button>
     </div>
@@ -57,7 +57,6 @@
       <p id="skinTypeText" class="text-xl font-semibold text-gray-800 mb-4">Normal</p>
       <h3 class="text-lg font-semibold text-gray-700">Recommended Treatment:</h3>
       
-      <!-- Scrollable recommendations -->
       <div id="recommendationContainer" class="text-gray-600 list-disc list-inside mt-2 text-left max-h-60 overflow-y-auto p-2">
         <ul id="recommendationList" class="text-gray-600 list-disc list-inside mt-2 text-left"></ul>
       </div>
@@ -67,7 +66,7 @@
   </div>
   
   <!-- External JS file -->
-  <script src="skin-analyzer.js"></script>
+  <script src="{{ url_for('static', filename='js/skin-analyzer.js') }}"></script>
 
 </body>
 </html>
